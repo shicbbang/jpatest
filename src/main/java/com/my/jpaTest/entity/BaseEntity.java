@@ -13,10 +13,10 @@ import java.time.LocalDateTime;
 @EntityListeners(AuditingEntityListener.class)
 @MappedSuperclass
 public class BaseEntity {
-    //새로운 행이 추가 될 때 만 입력일이 자동 추가 됨
+    // 새로운 행이 추가될 때 만 입력일이 자동 추가
     @CreatedDate
     LocalDateTime insertedAt;
-    //데이터가 수정 할 때 자동으로 수정일이 기록 됨
+    // 데이터가 수정될 때 자동으로 수정일이 기록
     @LastModifiedDate
     LocalDateTime updatedAt;
 }
